@@ -1,7 +1,7 @@
 export default function apiPostForm(e, url, data) {
     e.preventDefault()
 
-    fetch('http://localhost:8000' + url, {
+    fetch('https://annski.applikuapp.com' + url, {
         method:'POST',
         headers: {
             "Content-Type": "application/json",

@@ -6,7 +6,7 @@ export default function useFetch (url, options) {
     const [errors, setErrors] = useState(null)
 
     useEffect(() => {
-        fetch('http://localhost:8000' + url, {
+        fetch('https://annski.applikuapp.com' + url, {
             ...options,
             headers: {
                 ...options.headers,
