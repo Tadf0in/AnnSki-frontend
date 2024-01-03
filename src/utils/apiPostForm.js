@@ -1,7 +1,9 @@
-export default function apiPostForm(e, url, data) {
+import { API_URL } from "../../config"
+
+export default async function apiPostForm(e, url, data, setRes) {
     e.preventDefault()
 
-    fetch('https://annski.applikuapp.com' + url, {
+    await fetch(API_URL + url, {
         method:'POST',
         headers: {
             "Content-Type": "application/json",
@@ -9,6 +11,8 @@ export default function apiPostForm(e, url, data) {
         },
         body: JSON.stringify(data)
     })
-    .then(res => console.log(res))
+    .then(res => {
+        setRes(res)
+    })
     .catch(err => console.log(err))
 }

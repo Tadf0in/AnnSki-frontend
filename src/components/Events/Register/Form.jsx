@@ -3,6 +3,7 @@ import FormFloating from '../../../utils/Fields'
 import { FormSelect } from '../../../utils/Fields'
 import apiPostForm from '../../../utils/apiPostForm'
 import { useParams } from 'react-router-dom'
+import Ok from './Ok'
 
 export default function Form() {
   const {event_id} = useParams()
@@ -15,8 +16,15 @@ export default function Form() {
     ecole: "",
     bus: "",
   })
+  const [response, setResponse] = useState(null)
 
-  return <form className='register-form' onSubmit={e => apiPostForm(e, '/api/events/register/'+event_id, formData)}>
+  const handleSubmit = async (e) => {
+    await apiPostForm(e, '/api/events/register/'+event_id, formData, setResponse)
+  }
+
+  return <>{ response ? <Ok status={response.status}></Ok>
+    :   
+    <form className='register-form' onSubmit={e => handleSubmit(e)}>
       <FormSelect key="form-select-register-adherent" name="adherent" placeholder="Adhérent ?" 
       get={formData} set={setFormData} options={[
         ["false", "Non adhérent"], 
@@ -48,4 +56,5 @@ export default function Form() {
 
       <button type='submit' className='btn btn-primary form-submit'>S'inscrire</button>
     </form>
+  }</>
 }

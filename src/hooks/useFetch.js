@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { API_URL } from "../../config"
 
 export default function useFetch (url, options) {
     const [loading, setLoading] = useState(true)
@@ -6,7 +7,7 @@ export default function useFetch (url, options) {
     const [errors, setErrors] = useState(null)
 
     useEffect(() => {
-        fetch('https://annski.applikuapp.com' + url, {
+        fetch(API_URL + url, {
             ...options,
             headers: {
                 ...options.headers,

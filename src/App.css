@@ -127,6 +127,9 @@ video {
 .form-select {
     height: 58px;
 }
+.register-ok {
+    margin-top: 20px;
+}
 
 footer {
     background-color: #222;

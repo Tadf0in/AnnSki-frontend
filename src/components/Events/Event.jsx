@@ -38,7 +38,7 @@ export default function Event({ event }) {
         <br />
 
         <span className='event-footer d-flex align-items-center'>
-          { event.can_register 
+          { event.can_register && event.nb_max - event.nb_inscrits > 0
           ? <Link to={"/sorties/inscription/" + event.id} className="btn btn-primary">S'inscrire</Link> 
           : <button disabled className='btn btn-secondary'><i className="fa-solid fa-lock"></i>&nbsp;&nbsp;S'inscrire</button>
           }
