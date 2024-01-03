@@ -12,7 +12,8 @@ export default function Home() {
   let {loading, data} = useFetch('/api/events', {method: 'GET'})
 
   if (data) {
-    data = data.filter(e => new Date(e.date) > new Date())[0]
+    data = data.filter(e => new Date(e.date) > new Date())
+    data = data[data.length-1]
   }
 
   return (
