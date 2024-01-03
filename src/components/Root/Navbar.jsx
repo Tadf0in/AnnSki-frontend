@@ -7,7 +7,7 @@ export default function Navbar() {
     <nav className='navbar navbar-expand-md bg-body-tertiary' id='navbar'>
         <div className="container-fluid barre d-flex align-items-center">
             <NavLink to="" className="navbar-brand d-flex align-items-center">
-                <img src={logo} className='d-inline-block' alt="Logo" width="50" height="50"/>
+                <img src={logo} className='d-inline-block nav-logo' alt="Logo" width="50" height="50"/>
                 &nbsp; Ann'ski
             </NavLink>
 
