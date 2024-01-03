@@ -37,6 +37,10 @@ const router = createBrowserRouter([
       { 
         path: '/profile',
         element: <Profile />
+      },
+      {
+        path: '/admin',
+        element: <a href="https://annski.applikuapp.com/admin">Se connecter en tant qu'admin</a>
       }
     ]
   }

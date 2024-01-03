@@ -9,7 +9,11 @@ export default function Home() {
   useEffect(() => {
     setNavbarHeight(document.getElementById('navbar').clientHeight)
   }, [])
-  const {loading, data} = useFetch('/api/events/0', {method: 'GET'})
+  const {loading, data} = useFetch('/api/events', {method: 'GET'})
+
+  if (data) {
+    data = data.filter(e => new Date(e.date) > new Date())[0]
+  }
 
   return (
     <>
