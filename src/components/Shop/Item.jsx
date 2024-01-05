@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Item({ item }) {
 
   return (
@@ -11,7 +13,8 @@ export default function Item({ item }) {
           <p className="card-text">{item.desc}</p>
         </div>
         <span className='fw-bold fs-4 prix'>{item.prix.toString().replace('.', ',')}€</span>
-        <button className="btn btn-primary">Acheter</button>
+
+        <Link to={"/goodies/acheter/"+item.id} className="btn btn-primary">Acheter</Link>
     </div>
   )
 }

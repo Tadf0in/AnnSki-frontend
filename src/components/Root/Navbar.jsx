@@ -24,7 +24,7 @@ export default function Navbar() {
                         <NavLink to="sorties" className='nav-link'>Sorties</NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink to="shop" className='nav-link'>Goodies</NavLink>
+                        <NavLink to="goodies" className='nav-link'>Goodies</NavLink>
                     </li>
                 </ul>
             </div>

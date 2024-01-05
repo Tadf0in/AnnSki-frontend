@@ -7,10 +7,14 @@ import Root from './components/Root/Root'
 import Footer from './components/Root/Footer'
 
 import Home from './components/Home/Home'
+
 import Events from './components/Events/Events'
-import Shop from './components/Shop/Shop'
-import Profile from './components/Profile/Profile'
 import Register from './components/Events/Register/Register'
+
+import Shop from './components/Shop/Shop'
+import Buy from './components/Shop/Buy'
+
+import Profile from './components/Profile/Profile'
 
 const router = createBrowserRouter([
   {
@@ -31,8 +35,12 @@ const router = createBrowserRouter([
         element: <Register />
       }, 
       { 
-        path: '/shop',
+        path: '/goodies',
         element: <Shop />
+      }, 
+      { 
+        path: '/goodies/acheter/:goodie_id',
+        element: <Buy />
       }, 
       { 
         path: '/profile',
