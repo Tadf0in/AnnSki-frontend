@@ -131,7 +131,6 @@ video {
     margin-top: 20px;
 }
 
-
 .list-shop {
     display: grid;
     grid-gap: 20px;
@@ -169,6 +168,32 @@ video {
     justify-self: flex-end;
 }
 
+.buy {
+    gap: 20px;
+}
+.buy-page {
+    max-width: 800px;
+    width: calc(100% - 40px);
+    gap: 40px;
+}
+.buy-left h2 {
+    margin: 20px 0;
+}
+.buy-left img {
+    object-fit: contain;
+    width: 300px;
+    height: 300px;
+}
+@media (max-width: 600px) {
+    .buy-page {
+        flex-direction: column;
+        align-items: center;
+    }
+    .buy-right {
+        max-width: 300px;
+        width: calc(100% - 40px);
+    }
+}
 
 footer {
     background-color: #222;
