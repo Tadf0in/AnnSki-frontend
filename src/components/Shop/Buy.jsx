@@ -24,8 +24,7 @@ export default function Buy() {
 
     const handleRetour = (e) => {
         setResponse(null)
-        setClique(false)
-        document.getElementById('navbar').scrollIntoView()
+        document.getElementById('footer').scrollIntoView()
     }
     
     return response ? <div className="d-flex flex-column align-items-center">
