@@ -8,7 +8,7 @@ export default function Shop() {
   return <>
     {loading && <Loading />}
 
-    {data ? // data -> false = Hide Goodies
+    {data && data.lenght > 0 ? // data -> false = Hide Goodies
     <div className='shop d-flex flex-column align-items-center'>
       <h1 className='section-title fs-1'>Goodies</h1>
       <div className='list-shop'>
