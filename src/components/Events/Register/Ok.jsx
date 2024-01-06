@@ -8,7 +8,11 @@ export default function Ok({ status }) {
             color = "success"
             break
         case 208:
-            message = "Vous êtes déjà inscrit pour cette sortie"
+            message = <>
+                Vous êtes déjà inscrit pour cette sortie.
+                <br/>
+                Si vous souhaitez prendre une deuxième place merci de renseigner une adresse mail différente.
+            </>
             color = "info"
             break
         case 400:
@@ -17,7 +21,7 @@ export default function Ok({ status }) {
             break
         case 403:
             message = "Désolé, il ne reste plus de place pour cette sortie, les inscriptions sont fermées"
-            color = "success"
+            color = "danger"
             break
         case 500:
             message = "Un problème est survenu au niveau du serveur, si le problème persiste veuillez contacter un membre du bureau"

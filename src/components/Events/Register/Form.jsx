@@ -22,7 +22,10 @@ export default function Form() {
     await apiPostForm(e, '/api/events/register/'+event_id, formData, setResponse)
   }
 
-  return <>{ response ? <Ok status={response.status}></Ok>
+  return <>{ response ? <>
+      <Ok status={response.status}></Ok>
+      <button className="btn btn-primary" onClick={() => setResponse(null)}>Retour</button>
+    </>
     :   
     <form className='register-form' onSubmit={e => handleSubmit(e)}>
       <FormSelect key="form-select-register-adherent" name="adherent" placeholder="Adhérent ?" 
