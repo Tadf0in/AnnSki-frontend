@@ -7,7 +7,7 @@ export default function Footer () {
 }
 
 function SocialNetwork ({pseudo, img_src, link}) {
-    return <div className="d-flex flex-column align-items-center">
+    return <div className="d-flex flex-column align-items-center" id="footer">
         <a href={link} className="footer-link d-flex flex-column align-items-center">
             <img src={img_src} alt="logo instagram" width="40px" height="40px" />
             @{pseudo}
