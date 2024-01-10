@@ -23,7 +23,7 @@ export default function Register () {
         { data && data.can_register && 
         <div className='register d-flex flex-column align-items-center'>
             <Header data={data} />
-            <Form />
+            <Form data={data}/>
         </div>
         }
     </>

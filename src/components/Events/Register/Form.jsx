@@ -5,7 +5,7 @@ import apiPostForm from '../../../utils/apiPostForm'
 import { useParams } from 'react-router-dom'
 import Ok from './Ok'
 
-export default function Form() {
+export default function Form({ data }) {
   const {event_id} = useParams()
   const [formData, setFormData] = useState({
     adherent: "",
@@ -23,7 +23,7 @@ export default function Form() {
   }
 
   return <>{ response ? <>
-      <Ok status={response.status}></Ok>
+      <Ok status={response.status} prix={formData.adherent==="true" ? data.prixA+0.5 : data.prixNA+0.5}></Ok>
       <button className="btn btn-primary" onClick={() => setResponse(null)}>Retour</button>
     </>
     :   

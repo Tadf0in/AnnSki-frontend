@@ -130,6 +130,33 @@ video {
 .register-ok {
     margin-top: 20px;
 }
+.ok-payer {
+    gap: 20px;
+}
+.lydia-btn {
+    background-color: #5B8FC7;
+    border-radius: 3px;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 17px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.lydia-btn:hover {
+    background-color: #6d9aca;
+}
+.lydia-btn img {
+    width: 30px;
+    height: 30px;
+}
+.ok-later {
+    text-decoration: underline!important;
+    margin-bottom: 40px;
+}
+
 
 .list-shop {
     display: grid;
